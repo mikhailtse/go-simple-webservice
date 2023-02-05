@@ -1,6 +1,6 @@
 # go-simple-webservice
 
-This is a simple web service written on golang.
+A simple web service written on golang.
 
 ## How to run
 
