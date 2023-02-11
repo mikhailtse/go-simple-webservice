@@ -1,3 +1,3 @@
 module github.com/mikhailtse/go-simple-webservice
 
-go 1.19
+go 1.20
