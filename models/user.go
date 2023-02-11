@@ -22,7 +22,7 @@ func GetUsers() []*User {
 
 func AddUser(u User) (User, error) {
 	if u.Id != 0 {
-		return User{}, errors.New("new User must not include id or it must be set to 0")
+		return User{}, errors.New("new user must not include id or it must be set to 0")
 	}
 	u.Id = nextId
 	nextId++
@@ -36,7 +36,7 @@ func GetUserById(id int) (User, error) {
 			return *u, nil
 		}
 	}
-	return User{}, fmt.Errorf("user with Id '%v' not found", id)
+	return User{}, fmt.Errorf("user with id '%v' not found", id)
 }
 
 func UpdateUser(u User) (User, error) {
@@ -46,7 +46,7 @@ func UpdateUser(u User) (User, error) {
 			return u, nil
 		}
 	}
-	return User{}, fmt.Errorf("user with Id '%v' not found", u.Id)
+	return User{}, fmt.Errorf("user with id '%v' not found", u.Id)
 }
 
 func RemoveUserById(id int) error {
@@ -56,5 +56,5 @@ func RemoveUserById(id int) error {
 			return nil
 		}
 	}
-	return fmt.Errorf("user with Id '%v' not found", id)
+	return fmt.Errorf("user with id '%v' not found", id)
 }
